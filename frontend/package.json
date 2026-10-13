@@ -1,0 +1,30 @@
+{
+  "name": "miaoji-zhizhang",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "vite --mode server",
+    "build": "vite build",
+    "build:server": "vite build --mode server --outDir dist-server",
+    "preview": "vite preview",
+    "test": "node --test tests/draftEngine.test.js tests/ledger.test.js tests/ledgerBackup.test.js tests/moneyTotals.test.js tests/recordStore.test.js tests/recordHmr.test.js tests/conversationStore.test.js tests/chatInteractions.test.js tests/statistics.test.js tests/statsInteractions.test.js tests/chatQuery.test.js tests/journal.test.js tests/navigation.test.js tests/manualRendering.test.js tests/editorRendering.test.js tests/billCsv.test.js tests/calendar.test.js tests/monthReview.test.js tests/localProfile.test.js tests/profileInteractions.test.js tests/apiClient.test.js tests/session.test.js tests/authLifecycle.test.js tests/routerAuth.test.js tests/loginInteractions.test.js tests/remoteLedger.test.js tests/aiDraft.test.js tests/ledgerReloadInteractions.test.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.23",
+    "echarts": "^6.1.0",
+    "lucide-vue-next": "^0.577.0",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.42",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.21"
+  },
+  "description": "喵叽智账 - 猫猫陪伴的聊天记账 Web 应用"
+}

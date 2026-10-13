@@ -1,0 +1,26 @@
+{
+  "source": "docs/assets/reference/cat-fluffy-avatar-candidate-v1.png",
+  "prompt": "docs/assets/source/cat-fluffy-avatar-prompt-v1.txt",
+  "sourceSha256": "c39b141e6d807afedf763ceb1ee4d25151712b3ceacdb3e83bd0168d45cd30a2",
+  "outputSha256": "e4a50c592fa2c799e3443e802bf56b8a39ff64853b206e282be77cc932e5dfcd",
+  "outputSize": [
+    256,
+    256
+  ],
+  "outputBytes": 86657,
+  "cropBox": [
+    161,
+    235,
+    1905,
+    1862
+  ],
+  "visibleAlphaThresholdForCropOnly": 16,
+  "maxArtworkSize": [
+    232,
+    232
+  ],
+  "userVisualAcceptance": "approved",
+  "approvedAt": "2026-10-02",
+  "referenceUseIndependentlyVerified": false,
+  "usage": "Chat page header and assistant message avatars only; original avatar retained"
+}

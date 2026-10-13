@@ -1,0 +1,138 @@
+@import './styles/home-visual-tokens.css';
+@import './styles/journal-evolution.css';
+@import './styles/cat-rich.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-cream text-gray-900 antialiased;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-cream font-sans text-gray-900;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+.paper-surface {
+  background-color: #fffbf0;
+  background-image:
+    radial-gradient(ellipse at 12% 4%, rgba(251, 191, 36, 0.18) 0 72px, transparent 73px),
+    radial-gradient(ellipse at 90% 18%, rgba(253, 164, 175, 0.13) 0 84px, transparent 85px),
+    radial-gradient(ellipse at 8% 56%, rgba(209, 250, 229, 0.35) 0 68px, transparent 69px),
+    radial-gradient(rgba(31, 41, 55, 0.045) 0.7px, transparent 0.7px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 20px 20px;
+}
+
+.bottom-wave {
+  background: linear-gradient(180deg, #f8d05b 0%, #f2ba3f 100%);
+}
+
+.bottom-wave::before {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  width: 72%;
+  height: 38px;
+  content: '';
+  background: inherit;
+  border-radius: 50% 50% 0 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.message-enter {
+  animation: message-slide-up 0.28s ease both;
+}
+
+/* 保持整页纸色连续；不 transform 页面根节点，避免固定导航跟随内容漂移。 */
+.app-shell {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--zz-home-bg);
+}
+
+.page-enter-active {
+  position: relative;
+  z-index: 1;
+  transition: opacity 420ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.page-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 420ms linear;
+}
+
+.page-leave-active * {
+  pointer-events: none !important;
+}
+
+.page-enter-from {
+  opacity: 1;
+}
+
+/* 旧页保持可见，直到新页盖好；没有双重淡出形成的空档。 */
+.page-leave-to {
+  opacity: 1;
+}
+
+.mascot-bob {
+  animation: mascot-bob 2.4s ease-in-out infinite;
+}
+
+@keyframes message-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mascot-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .message-enter,
+  .mascot-bob {
+    animation: none;
+  }
+
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+}

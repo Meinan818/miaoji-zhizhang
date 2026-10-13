@@ -1,0 +1,94 @@
+/* Cat candy edition. Native UI ornaments only; generated mascot candidates are NOT applied. */
+:root {
+  --zz-home-bg: #fff5e9;
+  --zz-home-paper: #fffcf5;
+  --zz-home-ink: #654333;
+  --zz-home-ink-soft: #806151;
+  --zz-home-line: #dfbba4;
+  --zz-home-pink-soft: #f6d2dc;
+  --zz-home-pink: #9b4c61;
+  --zz-home-income-panel: #e0eed5;
+  --zz-home-expense-panel: #f9d5dc;
+  --zz-home-green: #416e52;
+  --zz-home-title-brush: #f9e2b8;
+  --zz-home-font: "Noto Sans SC", "Microsoft YaHei UI", "微软雅黑", sans-serif;
+}
+.app-shell { overflow-x:clip; }
+@media (prefers-reduced-motion:no-preference) {
+  .page-enter-active > main, .page-enter-active > .manual-content, .page-enter-active > .miao-header, .page-enter-active > .miao-messages {
+    animation: cat-page-arrive 420ms cubic-bezier(.2,.85,.25,1) both;
+  }
+  @keyframes cat-page-arrive {
+    0% { opacity:.76; transform:translateX(var(--page-shift,42px)) translateY(6px); }
+    72% { opacity:1; transform:translateX(-2px) translateY(-1px); }
+    100% { opacity:1; transform:translateX(0) translateY(0); }
+  }
+  .home-nav-active .cat-nav-icon { animation:cat-icon-pop 440ms cubic-bezier(.2,.8,.2,1); }
+  @keyframes cat-icon-pop { 0% {transform:translateY(3px) scale(.86) rotate(-7deg)} 65% {transform:translateY(-4px) scale(1.07) rotate(4deg)} 100% {transform:translateY(0) scale(1) rotate(0)} }
+  .home-return-today, .home-nav-content a, .manual-entry { transition:background-color 180ms,box-shadow 180ms,translate 180ms; }
+}
+#app .notebook-evolution { background-color:var(--zz-home-bg); background-image:radial-gradient(ellipse at 5% 1%,#f8dbe277,transparent 28%),radial-gradient(ellipse at 94% 28%,#e3ebd955,transparent 30%),radial-gradient(#d6aa8960 .8px,transparent 1px); background-size:100% 650px,100% 900px,24px 24px; }
+#app .notebook-evolution h1 { font-weight:600; letter-spacing:.8px; }
+#app .notebook-evolution h2 { font-weight:500; }
+#app .home-return-today { display:inline-flex; align-items:center; justify-content:center; gap:5px; padding:7px 12px; border:1.5px solid #cd9c87; border-radius:17px 16px 20px 14px; background:linear-gradient(#fff3df,#fbdccc); color:#784d3d; box-shadow:0 4px 0 #e9bdae,0 7px 11px #cb9a7a22; font-size:12px; font-weight:500; }
+#app .home-return-today .cat-nav-icon { width:23px; height:23px; }
+#app .home-return-today:active { translate:0 2px; box-shadow:0 2px 0 #e9bdae; }
+#app .home-bottom-nav { height:calc(var(--zz-home-bottom-nav-height) + env(safe-area-inset-bottom,0px)); border-top:1.5px solid #e6c1a9; background:#fff3e7; box-shadow:0 -5px 18px #98613c14; }
+#app .home-nav-content { background:#fff3e7; padding-top:4px; padding-bottom:calc(5px + env(safe-area-inset-bottom,0px)); }
+#app .home-nav-item, #app .home-compose { gap:1px; padding:2px 0; font-size:11px; color:#805744; }
+#app .home-nav-active { background:#fce1ce; border:1.5px solid #dba890; border-radius:18px 17px 19px 15px; box-shadow:0 3px 0 #ebc5b2; transform:none; }
+#app .home-plus { width:48px; height:48px; border:1.5px solid #ce9c88; border-radius:18px; background:#f9ceda; box-shadow:0 4px 0 #e4adba; transform:none; }
+#app .home-compose { translate:0 -4px; }
+#app .home-compose:active { translate:0 -1px; }
+#app .manual-entry { border-width:1.5px; background:#fff0df; box-shadow:0 4px 0 #ebc5b2; font-weight:500; }
+#app .journal-calendar, #app .bills-summary, #app .profile-ledger-card, #app .profile-entry-card { border:1.5px solid #dfb69c; border-radius:24px 22px 27px 20px; box-shadow:0 5px 0 #eed6b9,0 9px 18px #9b6b4020; background-color:var(--zz-home-paper); }
+/* A shared paper construction: home and profile cannot drift into unrelated rounded panels. */
+#app .cat-money-note { --note-line:#b9cca4; --note-fold:#c1d4b1; --note-rule:#a9c2a326; position:relative; isolation:isolate; border:1.5px solid var(--note-line); border-radius:5px 6px 12px 5px; padding:13px 12px 16px; background-color:#e0eed5; background-image:repeating-linear-gradient(transparent 0 24px,var(--note-rule) 24px 25px); background-position:0 12px; box-shadow:0 4px 0 #cbdbb7,0 7px 10px #8d714022; transform:rotate(-1deg); }
+#app .cat-money-note-expense { --note-line:#dfabb7; --note-fold:#ecb4c1; --note-rule:#cf9daa20; background-color:#f9d5dc; box-shadow:0 4px 0 #efbecb,0 7px 10px #8d714022; transform:rotate(1deg); }
+#app .cat-money-note::before { content:''; position:absolute; width:34px; height:14px; top:-8px; left:12px; background:#fff5d4bb; border-inline:1px solid #ffffff88; transform:rotate(-8deg); pointer-events:none; }
+#app .cat-money-note::after { content:''; position:absolute; right:-1px; bottom:-1px; width:15px; height:15px; background:linear-gradient(135deg,var(--note-fold) 49%,var(--zz-home-paper) 51%); border-radius:5px 0 0; pointer-events:none; }
+#app .cat-money-note p:not(.calendar-amount), #app .cat-money-note dt { position:relative; z-index:1; font-size:12px; }
+#app .cat-money-note dd, #app .calendar-amount { position:relative; z-index:1; font-size:clamp(16px,4.8vw,21px); font-weight:500; }
+#app .profile-summary { gap:14px; padding:5px 2px 4px; margin-top:17px; }
+#app .profile-summary-wide .cat-money-note, #app .calendar-summary-grid-wide .cat-money-note { transform:none; }
+#app .profile-footprints { border:1.5px solid #c8c9a2; border-radius:27px 24px 29px 23px; background:radial-gradient(ellipse at 93% 3%,#ffe2c6 0 26%,transparent 27%),linear-gradient(135deg,#f0f2d8,#e7efda); box-shadow:0 5px 0 #d5dfbd,0 9px 18px #8d714018; padding:20px 14px 16px; overflow:hidden; }
+#app .profile-footprints::before { content:''; position:absolute; right:22px; top:-7px; width:40px; height:16px; background:#f7cdd7; border-radius:5px; transform:rotate(9deg); pointer-events:none; }
+#app .profile-footprint-item { border:1px solid #d2d6b4; border-radius:14px; background:#fff8eacc; padding:7px 0; box-shadow:0 3px 0 #dce3c6; }
+#app .profile-footprint-item.recorded { background:#f7d3d9; border-color:#e3b4be; }
+#app .profile-footprint-item .journal-sticker { color:#a9777b; }
+#app .profile-footprints .profile-section-heading h2 { font-size:16px; }
+#app .profile-local-badge { white-space:normal; line-height:1.7; }
+#app .bills-day-group { border-left:2px solid #e6c6b3; padding-left:13px; }
+#app .bills-record { position:relative; padding:14px 12px; border:1.5px solid #dfb59e; border-radius:20px 23px 21px 18px; background:#fffaf0; box-shadow:0 5px 0 #f1d5c2,0 8px 15px #a8754b14; background-image:radial-gradient(circle,#e6c2a5 1px,transparent 1.4px); background-size:6px 6px; background-repeat:repeat-x; background-position:0 calc(100% - 5px); }
+#app .bills-record-stamp { border:0; border-radius:0; background:transparent; flex-basis:44px; height:44px; }
+#app .bills-record-actions { max-width:48%; }
+#app .bills-record-amount { max-width:none; white-space:nowrap; font-size:clamp(13px,3.6vw,16px); }
+#app .bills-search-card { border:1.5px solid #c2a6d3; background:linear-gradient(135deg,#f2e4f6,#eadcef); border-radius:22px 25px 20px 24px; box-shadow:0 4px 0 #ddc6e5; }
+#app .review-trend { position:relative; background:radial-gradient(ellipse at 4% 0%,#ffe3c9 0 18%,transparent 19%),linear-gradient(140deg,#fff7ed,#fce5e8); border:1.5px solid #e2b6a4; border-radius:27px 26px 30px 24px; padding:20px 15px 17px; box-shadow:0 5px 0 #efcfc0,0 9px 18px #a06a4118; }
+#app .review-cat-guide { display:flex; align-items:center; gap:7px; margin-top:12px; color:#805a4a; font-size:12px; }
+#app .review-cat-guide > span { flex:1; min-width:0; }
+#app .review-scroll-actions { display:flex; gap:6px; }
+#app .review-scroll-actions button { width:44px; height:44px; flex-shrink:0; border:1.5px solid #d7a58d; border-radius:13px; background:#fff3da; box-shadow:0 3px 0 #e8c5ad; font-size:25px; line-height:1; color:#805744; }
+#app .review-scroll-actions button:focus-visible { outline:2px solid #805744; outline-offset:2px; }
+#app .review-day-chart { scrollbar-width:none; -ms-overflow-style:none; padding-bottom:8px; }
+#app .review-day-chart::-webkit-scrollbar { display:none; width:0; height:0; }
+#app .review-day-track { background:#efd9c3; border-radius:7px 7px 4px 4px; box-shadow:inset 0 1px 2px #ba8c6d18; }
+#app .review-day-track i { background:linear-gradient(#e8a9b7,#ce8099); border-radius:7px 7px 3px 3px; }
+#app .review-day.selected { background:#f1c4d0; border:1px solid #dfa4b6; border-radius:13px; }
+#app .review-day-link, #app .stats-count-line > a { border:1.5px solid #d8ab91; border-radius:15px; padding:7px 12px; background:#fff0d8; color:#754939; box-shadow:0 3px 0 #edc9b3; text-decoration:none; }
+#app .review-comparison { border:1.5px solid #bccda8; border-radius:22px; box-shadow:0 4px 0 #d1dfbd; background:linear-gradient(120deg,#edf3d9,#e0ecd8); }
+#app .stats-wheel { background:none; width:214px; height:214px; box-shadow:none; outline:2px solid #e2c3aa; outline-offset:5px; }
+#app .stats-wheel-center { position:relative; z-index:1; border:1.5px solid #d4b89c; background:#fff8e9; box-shadow:0 3px 9px #89644016; }
+#app .stats-wheel-spark, #app .stats-wheel-flower { filter:drop-shadow(0 3px 0 #e5c4ae); }
+#app .manual-card, #app .stats-category-card, #app .profile-help-card, #app .profile-info-card { border-width:1.5px; border-radius:24px; box-shadow:0 5px 0 #edd5bf; }
+@media(max-width:359px) { #app .home-return-today { gap:4px; padding-inline:9px; } #app .cat-money-note { padding-inline:10px; } #app .review-scroll-actions button { width:44px; } #app .home-nav-content { padding-inline:10px; } }
+
+#app .profile-footprint-muted { opacity:.32; }
+#app .profile-entry-icon { width:46px; height:46px; border:0; background:transparent; transform:none; }
+#app .profile-entry { border-bottom-style:solid; border-bottom-color:#eed8c2; }
+#app .profile-entry-icon .cat-nav-icon { width:42px; height:42px; }
+
+/* 分类图案承载分类语义；小票只用于明细导航。 */
+#app .home-record-stamp, #app .stats-category-stamp { flex:0 0 46px; height:46px; border:0; background:transparent; border-radius:0; }
+#app .bills-record-stamp { flex-basis:46px; height:46px; }
+#app .stats-category-name { align-items:center; }

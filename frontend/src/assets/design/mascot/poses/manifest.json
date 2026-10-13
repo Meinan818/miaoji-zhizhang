@@ -1,0 +1,134 @@
+{
+  "source": "docs/assets/reference/miao-actions-candidate-v1.png",
+  "sourceSha256": "eef5ed1dd750cd2358e2e07376640d4bad2be7c0121a3dbdfec9b3710028e08b",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "transparentFraction": 0.5503,
+  "provider": "Kitool",
+  "requestCount": 1,
+  "modelRequested": "gpt-image-2.5-flare",
+  "referenceInputMode": "experimental",
+  "serverReferenceUseIndependentlyVerified": false,
+  "userVisualAcceptance": "pending",
+  "assets": [
+    {
+      "file": "reserved/miao-welcome.png",
+      "label": "欢迎挥手",
+      "cell": 1,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 68301,
+      "sha256": "ae0cc6a2774891077fa4b05b25c1fb23562a961095d858cb6c6eb8997e683585",
+      "transparentCorners": true,
+      "usageStatus": "reserved"
+    },
+    {
+      "file": "miao-writing.png",
+      "label": "抱账本记账",
+      "cell": 2,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 71561,
+      "sha256": "99b931f9ea6df61030bf6108fa072436801eb31a9adac71bb18e80fb31b36187",
+      "transparentCorners": true,
+      "usageStatus": "active"
+    },
+    {
+      "file": "miao-thinking.png",
+      "label": "托腮思考",
+      "cell": 3,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 63648,
+      "sha256": "4091cfe09631da26c739be6b9f713ddd2b9c126055dc10501c6b63ff12194355",
+      "transparentCorners": true,
+      "usageStatus": "active"
+    },
+    {
+      "file": "reserved/miao-success.png",
+      "label": "举爪庆祝",
+      "cell": 4,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 73649,
+      "sha256": "3271a60889a0ab9c1da5882e9aeacdd1192b9de0ad473c860a3ee0a3c4277fb2",
+      "transparentCorners": true,
+      "usageStatus": "reserved"
+    },
+    {
+      "file": "miao-confused.png",
+      "label": "摊爪疑惑",
+      "cell": 5,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 64015,
+      "sha256": "93278b051f78bd0914ec3f4dc4fb6fb30d613265e778ae998eb38cdbe78e6317",
+      "transparentCorners": true,
+      "usageStatus": "active"
+    },
+    {
+      "file": "reserved/miao-sleepy.png",
+      "label": "抱枕打盹",
+      "cell": 6,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 69310,
+      "sha256": "70e74da2cb97158265d37b25ddce5bc8200d46cfc06b46ea6cec30888379b7e1",
+      "transparentCorners": true,
+      "usageStatus": "reserved"
+    },
+    {
+      "file": "reserved/ginger-pouch.png",
+      "label": "橘猫钱袋",
+      "cell": 7,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 72759,
+      "sha256": "9fb02a18aadfbb310a9f95a52276a882e302b0c18dfb6d1e8f8bc53542cdde53",
+      "transparentCorners": true,
+      "usageStatus": "reserved"
+    },
+    {
+      "file": "cream-receipt.png",
+      "label": "奶油猫小票",
+      "cell": 8,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 65751,
+      "sha256": "f48f024c6293db6e2506df24c14541b661133de62734ef9437d187b45a959d57",
+      "transparentCorners": true,
+      "usageStatus": "active"
+    },
+    {
+      "file": "reserved/tuxedo-paper.png",
+      "label": "黑白猫纸片",
+      "cell": 9,
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 79936,
+      "sha256": "eefe56e20f2965c834e90226eea010e6ec78d9c688d273a965209b55367200db",
+      "transparentCorners": true,
+      "usageStatus": "reserved"
+    }
+  ]
+}

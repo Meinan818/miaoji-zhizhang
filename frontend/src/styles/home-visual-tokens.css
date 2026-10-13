@@ -1,0 +1,80 @@
+/*
+ * 喵叽智账首页视觉基准，与已确认的聊天页配色/字形一致。
+ *
+ * 首页日历与首页专用导航使用；不改其他页面的共用样式。
+ * 原稿参考比例保留作历史对照，不再要求新版套用旧波浪/外框素材。
+ */
+:root {
+  /* 参考画布 */
+  --zz-home-reference-width: 961;
+  --zz-home-reference-height: 1637;
+  --zz-home-reference-ratio: 0.587;
+  --zz-home-viewport-width: 390;
+  --zz-home-viewport-height: 844;
+  --zz-home-scaled-canvas-height: 664;
+
+  /* 颜色 */
+  --zz-home-bg: #fdfaf3;
+  --zz-home-bg-alt: #f7f0e7;
+  --zz-home-ink: #3c261a;
+  --zz-home-ink-soft: #79634f;
+  --zz-home-line: #d9cbb6;
+  --zz-home-font: "Noto Sans SC", "Microsoft YaHei UI", "微软雅黑", sans-serif;
+  --zz-home-title-brush: #fceed4;
+  --zz-home-yellow: #fed76e;
+  --zz-home-yellow-soft: #f7d574;
+  --zz-home-pink: #9d6865;
+  --zz-home-pink-soft: #f8dfda;
+  --zz-home-green: #58705a;
+  --zz-home-green-soft: #eff3dd;
+  --zz-home-income-panel: #eff3dd;
+  --zz-home-expense-panel: #f8dfda;
+  --zz-home-paper: #fffdf8;
+  --zz-home-paper-grain: rgba(107, 74, 54, 0.045);
+  --zz-home-day-bg: #f5efe4;
+  --zz-home-day-outside-bg: #f9f4e9;
+  --zz-home-day-muted: #867666;
+
+  /* 页面与顶部 */
+  --zz-home-page-x: 16px;
+  --zz-home-content-width: 480px;
+  --zz-home-header-height: 88px;
+  --zz-home-header-gap: 16px;
+
+  /* 日历卡片与夹子 */
+  --zz-home-calendar-width: calc(100% - 32px);
+  --zz-home-calendar-top: 70px;
+  --zz-home-calendar-height: 425px;
+  --zz-home-calendar-radius: 16px;
+  --zz-home-calendar-border: 2px;
+  --zz-home-calendar-padding: 16px;
+  --zz-home-clip-width: 24px;
+  --zz-home-clip-height: 42px;
+
+  /* 日期网格 */
+  --zz-home-grid-gap-x: 2px;
+  --zz-home-grid-gap-y: 4px;
+  --zz-home-cell-width: 43px;
+  --zz-home-cell-height: 27px;
+  --zz-home-cell-ratio: 1.55;
+  --zz-home-cell-radius: 6px;
+
+  /* 月度汇总 */
+  --zz-home-summary-height: 72px;
+  --zz-home-summary-gap: 8px;
+  --zz-home-summary-radius: 12px;
+
+  /* 底部插画与导航 */
+  --zz-home-scene-top: auto;
+  --zz-home-scene-height: 150px;
+  --zz-home-bottom-nav-height: 86px;
+  --zz-home-nav-icon: 44px;
+  --zz-home-plus-diameter: 78px;
+  --zz-home-plus-overlap: 42px;
+  --zz-home-safe-area: env(safe-area-inset-bottom, 0px);
+
+  /* 阴影与描边 */
+  --zz-home-shadow-x: 3px;
+  --zz-home-shadow-y: 3px;
+  --zz-home-shadow-color: rgba(60, 38, 26, 0.12);
+}
