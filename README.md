@@ -6,6 +6,23 @@
 
 前端 Vue 3，后端 Java 21 + Spring Boot，数据存 MySQL，AI 用智谱 GLM-4-Flash 在后端调用。
 
+## 界面
+
+<table>
+  <tr>
+    <td align="center" width="33%"><img src="docs/screenshots/home.png" width="230" alt="首页：日历与当月收支"><br><sub>首页 · 日历与当月收支</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/chat.png" width="230" alt="聊天记账"><br><sub>聊天 · 说出开销，整理成草稿</sub></td>
+    <td align="center" width="33%"><img src="docs/screenshots/bills.png" width="230" alt="账单明细"><br><sub>明细 · 按日期分组的小票</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/stats.png" width="230" alt="月度统计"><br><sub>统计 · 分类占比与排行</sub></td>
+    <td align="center"><img src="docs/screenshots/profile.png" width="230" alt="个人账本"><br><sub>我的 · 账本概况与资料</sub></td>
+    <td align="center"><img src="docs/screenshots/desktop.png" width="230" alt="桌面端"><br><sub>桌面端 · 同一套页面</sub></td>
+  </tr>
+</table>
+
+截图取自演示模式（浏览器本地数据），账号模式界面一致。
+
 ## 功能
 
 **记账**
@@ -111,6 +128,7 @@ backend/            Spring Boot 应用
   src/main/resources/db/migration   Flyway 迁移
 deploy/             部署配置与说明
 docs/               设计规范、代码约定、开发指南
+docs/screenshots/   界面截图
 scripts/            本机启动脚本与整库备份脚本
 ```
 
@@ -121,3 +139,7 @@ scripts/            本机启动脚本与整库备份脚本
 - 记录标识用 UUID，组标识用于整组确认；编辑不改变标识，删除保留删除标记供读取方过滤。
 - 备份文件带格式版本号，导入前整体校验；编号冲突的账单跳过而不是覆盖。
 - 演示模式的数据只存在浏览器，账号模式的数据只存在服务端，不互相导入。
+
+## 许可
+
+[MIT](LICENSE)
