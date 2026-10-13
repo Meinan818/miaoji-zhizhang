@@ -1,0 +1,19 @@
+[Unit]
+Description=Miaoji Zhizhang backend (Spring Boot)
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+User=miaoji
+WorkingDirectory=/opt/miaoji/backend
+EnvironmentFile=/etc/miaoji/backend.env
+ExecStart=/usr/lib/jvm/java-21-openjdk-amd64/bin/java -Xms128m -Xmx320m -jar /opt/miaoji/backend/app.jar
+Restart=on-failure
+RestartSec=5
+SuccessExitStatus=143
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
