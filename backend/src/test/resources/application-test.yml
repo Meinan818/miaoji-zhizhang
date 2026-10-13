@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:miaoji;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password: ''
+    driver-class-name: org.h2.Driver
+miaoji:
+  ai:
+    enabled: false
+    api-key: ''
+  email:
+    enabled: false
+  auth:
+    attempt-limit: 10000
+    legacy-registration: true
